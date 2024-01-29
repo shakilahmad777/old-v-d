@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .container {
+            width: 80%;
+            height: 80%;
+            margin: 3% auto;
+            border-radius: 1rem;
+            box-shadow: 5px 5px 20px #ddd;
+            padding: 2rem;
+        }
+        h1 {
+            text-align: center;
+        }
+        .ques {
+            margin-top: 2rem;
+            padding: 1rem;
+            /* border-bottom: 2px solid #ddd; */
+            box-shadow: 0px -9px 9px -41px rgba(0,0,0,0.45),
+            0px 25px 20px -20px rgba(0,0,0,0.45);
+            /* box-shadow: 0px 8px 6px -10px black; */
+        }
+        h3 {
+            padding: 1rem;
+        }
+        h3 ~ p {
+            width: auto;
+            text-align: justify;
+            padding: 0 3rem 0 3rem;
+            margin-bottom: 5px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Zero Question Now Hero</h1>
+
+        <div class="ques ques1">
+            <h3>1. What is the difference between map, filter, foreach ?</h3>
+            <p>
+                map(), filter(), and forEach() are all higher-order functions in JavaScript that operate on arrays, but they have different purposes and return values.
+                <p>
+                    map() transforms each element in an array and returns a new array,
+                    filter() returns a new array containing only the elements that pass a test,
+                    forEach() executes a function for each element in the array without modifying the array or returning anything.
+                </p>
+            </p>
+        </div>
+        <div class="ques ques2">
+            <h3>2. What is the difference between local storage, session storage, cookies ?</h3>
+            <p>
+                LocalStorage, SessionStorage, and Cookies are all used for client-side storage in web browsers, but they have different characteristics and use cases.
+            </p>
+            <p>
+                LocalStorage and SessionStorage are used for client-side storage in the browser, with LocalStorage being permanent and available across all browser windows and tabs, and SessionStorage being temporary and available only within the same browser window or tab. Cookies are also used for client-side storage but are typically used for smaller amounts of data that need to be remembered across multiple requests and have an expiration date and size limit.
+            </p>
+        </div>
+        <div class="ques ques3">
+            <h3>1. What is the Event Loop?</h3>
+            <p>
+                An event loop is a programming construct used in event-driven programming, which is a programming paradigm where the flow of the program is determined by external events such as user actions or system events rather than being driven by the program's code.
+            </p>
+        </div>
+    </div>
+    
+    
+</body>
+</html>
