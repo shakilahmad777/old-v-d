@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fith Assignment</title>
+    <!-- css style link -->
+    <link rel="stylesheet" href="style/index.css">
+    <!-- Media quary css link -->
+    <link rel="stylesheet" href="style/media.css">
+    <!-- Google font family inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&family=Inter:wght@400;700;800&family=Lobster&family=Open+Sans:wght@400;600;700;800&family=Poppins:wght@500&family=Work+Sans:ital,wght@0,500;0,600;1,600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav class="nav-bar">
+            <div class="logo">
+                <h2 class="logo-title">Interactive</h2>
+                <p class="logo-sub-title">
+                    Geometry Genius
+                </p>
+            </div>
+            <ul>
+                <li><a href="./blog.html" target="_blank">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="geometry-genius">
+            <div class="card-area">
+                <div id="card-1" class="card" onmousemove="changeBGColor('card-1')" onmouseout="backgroundClear()">
+                    <img class="img-size" src="images/triangle.png" alt="">
+                    <h3>Triangle</h3>
+                    <p class="area-formula">Area (A) = 0.5 x
+                        <span id="tBOutput">b</span> x
+                        <span id="tHOutput">h</span>
+                    </p>
+
+                    <form action="">
+                        <input type="number" id="triBase" placeholder="b"><label for="">cm</label>
+                        <input type="number" id="triHeight" placeholder="h">
+                        <label for="">cm</label>
+                    </form>
+
+                    <button type="submit" id="triangle">Calculate</button>
+                </div>
+                <!-- Triangle end -->
+                <div id="card-2" class="card" onmousemove="changeBGColor('card-2')">
+                    <img class="img-size" src="images/rectangle.png" alt="">
+                    <h3>Rectangle</h3>
+                    <p class="area-formula">Area (A) =
+                        <span id="rWOutput">w</span> x
+                        <span id="rLOutput">i</span>
+                    </p>
+
+                    <form action="">
+                        <input type="number" id="recWidth" placeholder="w"><label for="">cm</label>
+                        <input type="number" id="recLength" placeholder="i">
+                        <label for="">cm</label>
+                    </form>
+
+                    <button type="submit" id="rectangle">Calculate</button>
+                </div>
+                <!-- Rectangle end -->
+                <div id="card-3" class="card" onmousemove="changeBGColor('card-3')">
+                    <img class="img-size" src="images/parallelogram.png" alt="">
+                    <h3>Parallelogram</h3>
+                    <p class="area-formula">Area (A) =
+                        <span id="pBOutput">b</span> x
+                        <span id="pHOutput">h</span>
+                    </p>
+
+                    <form action="">
+                        <input type="number" id="paraBase" placeholder="b"><label for="">cm</label>
+                        <input type="number" id="paraHeight" placeholder="h">
+                        <label for="">cm</label>
+                    </form>
+
+                    <button type="submit" id="parallelogram">Calculate</button>
+                </div>
+                <!-- Parallelogram end -->
+                <div id="card-4" class="card" onmousemove="changeBGColor('card-4')">
+                    <img class="img-size" src="images/rhombus.png" alt="">
+                    <h3>Rhombus</h3>
+                    <p class="area-formula">Area (A) = 0.5 x
+                        <span id="rDOutput1">d<sub>1</sub></span> x
+                        <span id="rDOutput2">d <sub>2</sub></span>
+                    </p>
+
+                    <form action="">
+                        <input type="number" id="pDiagonal" 
+                        placeholder="d1"><label for="">cm</label>
+                        <input type="number" id="qDiagonal" placeholder="d2">
+                        <label for="">cm</label>
+                    </form>
+
+                    <button type="submit" id="rhombus">Calculate</button>
+                </div>
+                <!-- Rhombus end -->
+                <div id="card-5" class="card" onmousemove="changeBGColor('card-5')">
+                    <img class="img-size" src="images/pentagon.png" alt="">
+                    <h3>Pentagon</h3>
+                    <p class="area-formula">Area (A) = 0.5 x
+                        <span id="pPOutput">p</span> x
+                        <span id="pBOutput">b</span>
+                    </p>
+
+                    <form action="">
+                        <input type="number" id="pentPremit" placeholder="p"><label for="">cm</label>
+                        <input type="number" id="pentBase" placeholder="b">
+                        <label for="">cm</label>
+                    </form>
+
+                    <button type="submit" id="pentagon">Calculate</button>
+                </div>
+                <!-- Pentagon end -->
+                <div id="card-6" class="card" onmousemove="changeBGColor('card-6')">
+                    <img class="img-size" src="images/ellipse.png" alt="">
+                    <h3>Ellipse</h3>
+                    <p class="area-formula">Area (A) = 3.14 x
+                        <span id="eAOutput">a</span> x
+                        <span id="eBOutput">b</span>
+                    </p>
+
+                    <form action="">
+                        <input type="number" id="axisA" placeholder="a"><label for="">cm</label>
+                        <input type="number" id="axisB" placeholder="b">
+                        <label for="">cm</label>
+                    </form>
+
+                    <button type="submit" id="ellipse">Calculate</button>
+                </div>
+                <!-- Ellipse end -->
+            </div>
+            <!-- --------------
+                Area Calculation
+            ---------------------->
+            <div class="area-calculation">
+                <div id="card" class="card">
+                    <h3><u>Area Calculation</u></h3>
+                    <div>
+                        <span id="all__result"></span>
+
+                        <span id="printTriangle"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <!-- main section end -->
+
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
